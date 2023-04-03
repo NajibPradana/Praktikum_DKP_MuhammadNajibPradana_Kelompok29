@@ -59,9 +59,34 @@ int tarif_total() {
         }
         return biaya_total;
     }
+
+
+	void nota_pembayaran(){
+cout << "\n\n----------------------------" << endl;
+cout << "_Nota Parkir Terlalu Lama_" << endl;
+cout << "----------------------------" << endl;
+cout << "Jenis Kendaraan : " << jenis<<endl;
+cout << "Masuk Pada Pukul : " << jam_masuk<<endl;
+cout << "Keluar Pada Pukul : " << jam_keluar<<endl;
+cout << "Lama Waktu Parkir : " << sel_jam<<endl;
+cout << "__________" << endl;
+cout << "Tagihan : \nPokok : " << biaya << "\nTambahan : " << tambahan ;
 }
+
+};
+
+
+
+
 int main()
 {
-    cout << "Hello world!" << endl;
-    return 0;
+    WaktuParkir A;
+    A.jenis_kendaraan();
+    A.tarif_perkendaraan();
+    A.waktu_masuk();
+    A.waktu_keluar();
+    A.waktu_total();
+    A.nota_pembayaran();
+    A.tarif_total();
+
 }
