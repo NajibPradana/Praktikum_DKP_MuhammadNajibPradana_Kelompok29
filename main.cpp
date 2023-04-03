@@ -30,6 +30,25 @@ switch (jenis){
 		default :
 			biaya=0;
 	}
+	void waktu_masuk() {
+    cout << "Jam Masuk Parkir : ";
+    cin >> jam_masuk;
+}
+
+void waktu_keluar() {
+    cout << "Jam keluar Parkir : ";
+    cin >> jam_keluar;
+}
+
+void waktu_total() {
+    if (jam_keluar < jam_masuk) {
+        sel_jam = (jam_keluar + 24) - jam_masuk;
+    }
+    else {
+        sel_jam = jam_keluar - jam_masuk;
+    }
+}
+
 }
 int main()
 {
