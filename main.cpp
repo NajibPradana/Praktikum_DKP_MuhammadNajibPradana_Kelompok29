@@ -48,7 +48,17 @@ void waktu_total() {
         sel_jam = jam_keluar - jam_masuk;
     }
 }
-
+int tarif_total() {
+        int biaya_total;
+        if (sel_jam>2) {
+            biaya_total=(biaya+(sel_jam-2)*tambahan);
+            cout << "\nTotal Biaya Parkir anda : " << biaya_total;
+        } else {
+            biaya_total=biaya;
+            cout <<"\nTotal Biaya Parkir anda : " << biaya_total;
+        }
+        return biaya_total;
+    }
 }
 int main()
 {
